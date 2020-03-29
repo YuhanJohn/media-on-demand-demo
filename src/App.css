@@ -1,12 +1,120 @@
 .App {
-  text-align: center;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 100vh;
+}
+
+.btn-area {
+  display: flex;
+  flex-flow: row;
+}
+.btn {
+  margin: 12px 8px 0 0 ;
+}
+.btn a, .btn span {
+  padding: 8px;
+  color: #ffffff;
+  background-color: #61dafb;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn a:hover, .btn span:hover {
+  opacity: 0.75;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+.router-link {
+  text-decoration: none;
+}
+.video-block {
+  padding: 32px 32px 32px 40px;
+  grid-column: 2 / span 1;
+  grid-row: 1 / -1;
+  display: flex;
+  flex-flow: column;
+  overflow: scroll;
+}
+.video-area {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+.video-list-title {
+  font-size: 1.25rem;
+}
+.video-list {
+  display: flex;
+  flex-flow: row;
+  width: 75vw;
+  overflow: scroll;
+}
+.video-item {
+  margin: 8px;
+}
 
+.video-info {
+  display: flex;
+  flex-flow: column;
+}
+.video-info a {
+  font-size: 0.75rem;
+  color: #6e6e6e;
+  cursor: pointer;
+  padding: 2px 4px;
+}
+.video-info a:hover {
+  opacity: 0.75;
+}
+span.video-title {
+  font-size: 1rem;
+  color: #000000;
+  cursor: pointer;
+  padding: 2px 4px;
+}
+
+.sidebar {
+  background-color: #ffffff;
+  padding: 32px;
+  /* border-right: solid 1px #4f4f4f; */
+  box-shadow: 10px 0px 8px -5px rgba(189,189,189,1);
+  display: flex;
+  flex-flow: column;
+}
+.sidebar a {
+  font-size: 1.5rem;
+  padding: 4px 0;
+  color: #000000;
+  cursor: pointer;
+}
+.sidebar a:hover {
+  opacity: 0.75;
+}
+
+/* video-setting */
+.video-setting {
+  padding: 40px;
+}
+.video-setting-item {
+  padding: 8px 0 0 0 ;
+  font-size: 1rem;
+}
+.img-demo {
+  width: 560px;
+  height: 240px;
+}
+/* video-description */
+
+.video-description {
+  padding: 40px;
+}
+.video-description-item {
+  padding: 8px 0 0 0 ;
+  font-size: 1rem;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
