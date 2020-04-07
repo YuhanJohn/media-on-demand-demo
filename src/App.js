@@ -23,18 +23,10 @@ function App() {
           <Link className="router-link" to="/video-block">愛情片</Link>
         </div>
         <Switch>
-          <Route path="/" exact={true}>
-            <VideoBlock/>
-          </Route>
-          <Route path="/video-block" exact={true}>
-            <VideoBlock/>
-          </Route>
-          <Route path="/video-setting" exact={true}>
-            <VideoSetting/>
-          </Route>
-          <Route path="/video-description" exact={true}>
-            <VideoDescription/>
-          </Route>
+          <Route path="/" exact={true} component={VideoBlock}/>
+          <Route path="/video-block" exact={true} component={VideoBlock}/>
+          <Route path="/video-setting" exact={true} component={VideoSetting}/>
+          <Route path="/video-description" exact={true} component={VideoDescription}/>
         </Switch>
       </Router>
     </div>
