@@ -8,7 +8,8 @@ const VideoBlock = () => {
 
     useEffect(()=>{
         fetch('http://123.204.228.84:8082/api/videos_most_views',{
-            type: 'get'
+            method: 'get',
+            'content-type': 'application/json'
         })
         .then(res=>res.json())
         .then(res=>{
@@ -19,7 +20,8 @@ const VideoBlock = () => {
 
     useEffect(()=>{
         fetch('http://123.204.228.84:8082/api/videos_newest',{
-            type: 'get'
+            method: 'get',
+            'content-type': 'application/json'
         })
         .then(res=>res.json())
         .then(res=>{
@@ -30,11 +32,24 @@ const VideoBlock = () => {
 
     useEffect(()=>{
         fetch('http://123.204.228.84:8082/api/videos_random',{
-            type: 'get'
+            method: 'get',
+            'content-type': 'application/json'
         })
         .then(res=>res.json())
         .then(res=>{
             setVideosRandom(res)
+            console.log(res)
+        })
+    }, [])
+
+    useEffect(()=>{
+        fetch('http://123.204.228.84:8082/api/video_types',{
+            'method': 'get',
+            'content-type': 'application/json'
+        })
+        .then(res=>res.json())
+        .then(res=>{
+            setVideosNewest(res)
             console.log(res)
         })
     }, [])
